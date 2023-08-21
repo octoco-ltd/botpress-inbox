@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
 
-export const Login = ({ setAuthenticated }) => {
-  const navigate = useNavigate();
+type LoginProps = {
+  setAuthenticated: (value: boolean) => void;
+};
+
+export const Login = ({ setAuthenticated }: LoginProps) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
